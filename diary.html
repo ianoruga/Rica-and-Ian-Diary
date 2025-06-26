@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipbook</title>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Exile&family=Tagesschrift&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="diary.css" />
+  </head>
+  <body>
+    <!-- Previous Button -->
+    <button id="prev-btn" class="b controller">
+      <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+    <!-- Book -->
+    <div id="book" class="book">
+      <!-- Paper 1 -->
+      <div id="p1" class="paper">
+        <div class="front">
+          <div id="f1" class="front-content frontPage">
+            <h1></h1>
+          </div>
+        </div>
+        <div class="back">
+          <div id="b1" class="back-content cover">
+            <!-- <h1>Back 1</h1> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper 2 -->
+      <div id="p2" class="paper">
+        <div class="front">
+          <div id="f2" class="front-content cover-1">
+            <h1 class="dear">Dear Rica</h1>
+            <div class="letter-content">
+              <p>
+                Hello Bebii!, This is our Digital Diary Book sana Hindi ka
+                macornihan HAHAHA, but before I show you yung mga pics dun sa
+                diary natin, I just want to write a simple short letter for you.
+                I didn't make this digital diary just because I was bored — I
+                made it because I want it to serve as a memory of the happy
+                moments we've shared together. kasi diba po nadelete mo na yung
+                mga pics natin at wala ka na po storage kaya naisipan ko na dito
+                ko nalang sya istore na may pakonting twist HAHAHA. I want you
+                to know that meeting you is the most beautiful gift life has
+                ever given me. Whenever we're not on good terms, and you
+                suddenly feel like the spark or the love is fading, I hope
+                you'll --
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div id="b2" class="back-content cover">
+            <!-- <h1>Back 2</h1> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper 3 -->
+      <div id="p3" class="paper">
+        <div class="front">
+          <div id="f3" class="front-content cover-2">
+            <div class="letter-content2">
+              <p>
+                come back to this diary and relive the beautiful memories we've
+                shared — and remember how much we mean to each other. I know I
+                have many flaws, I make mistakes, and I may not be the perfect
+                partner you've always dreamed of — but I promise, I’m always
+                striving to become the best I can be for you.Take care of
+                yourself, and please… no matter what challenges come our way,
+                don’t give up on us, because I won’t. I’ll keep fighting and
+                giving my best to create the future we both dream of.
+              </p>
+            </div>
+            <h1 class="dear2">- Ian Oruga</h1>
+          </div>
+        </div>
+        <div class="back">
+          <div id="b3" class="back-content cover">
+            <!-- <h1>Back 3</h1> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper 4 -->
+      <div id="p4" class="paper">
+        <div class="front">
+          <div id="f4" class="front-content cover-3"></div>
+        </div>
+        <div class="back">
+          <div id="b4" class="back-content cover-4">
+            <!-- <h1>Back 3</h1> -->
+          </div>
+        </div>
+      </div>
+      <!-- mga links -->
+      <button class="link1 links-1 popup-trigger" data-popup="#P1"></button>
+      <button class="link2 links-1 popup-trigger2" data-popup="#P2"></button>
+      <button class="link3 links-1 popup-trigger3" data-popup="#P3"></button>
+      <button class="link4 links-1 popup-trigger4" data-popup="#P4"></button>
+      <button class="link5 links-1 popup-trigger5" data-popup="#P5"></button>
+      <button class="link6 links-1 popup-trigger6" data-popup="#P6"></button>
+
+      <button class="link1 links-2 popup-trigger7" data-popup="#P7"></button>
+      <button class="link2 links-2 popup-trigger8" data-popup="#P8"></button>
+      <button class="link3 links-2 popup-trigger9" data-popup="#P9"></button>
+      <button class="link4 links-2 popup-trigger10" data-popup="#P10"></button>
+      <button class="link5 links-2 popup-trigger11" data-popup="#P11"></button>
+      <button class="link6 links-2 popup-trigger12" data-popup="#P12"></button>
+
+      <button class="link1 links-3 popup-trigger13" data-popup="#P13"></button>
+      <button class="link2 links-3 popup-trigger14" data-popup="#P14"></button>
+      <button class="link3 links-3 popup-trigger15" data-popup="#P15"></button>
+      <button class="link4 links-3 popup-trigger16" data-popup="#P16"></button>
+      <button class="link5 links-3 popup-trigger17" data-popup="#P17"></button>
+      <button class="link6 links-3 popup-trigger18" data-popup="#P18"></button>
+      <!-- Page 5 -->
+      <div id="p5" class="paper">
+        <div class="front">
+          <div id="f5" class="front-content cover-4">
+            <img src="1.png" class="pictureBox" />
+            <img src="2.png" class="pictureBox" />
+            <img src="3.png" class="pictureBox" />
+            <img src="4.png" class="pictureBox" />
+            <img src="5.png" class="pictureBox" />
+            <img src="6.png" class="pictureBox" />
+          </div>
+        </div>
+        <div class="back">
+          <div id="b5" class="back-content cover-5">
+            <!-- <h1>Back 3</h1> -->
+          </div>
+        </div>
+      </div>
+      <!-- Page 6 -->
+      <div id="p6" class="paper">
+        <div class="front">
+          <div id="f6" class="front-content cover-5">
+            <img src="7.png" class="pictureBox" />
+            <img src="8.png" class="pictureBox" />
+            <img src="9.png" class="pictureBox" />
+            <img src="10.png" class="pictureBox" />
+            <img src="11.png" class="pictureBox" />
+            <img src="12.png" class="pictureBox" />
+          </div>
+        </div>
+        <div class="back">
+          <div id="b6" class="back-content cover-4">
+            <!-- <h1>Back 3</h1> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 7 -->
+      <div id="p7" class="paper">
+        <div class="front">
+          <div id="f7" class="front-content cover-6">
+            <img src="13.png" class="pictureBox" />
+            <img src="14.png" class="pictureBox" />
+            <img src="15.png" class="pictureBox" />
+            <img src="16.png" class="pictureBox" />
+            <img src="17.png" class="pictureBox" />
+            <img src="18.png" class="pictureBox" />
+          </div>
+        </div>
+        <div class="back">
+          <div id="b7" class="back-content cover-4">
+            <!-- <h1>Back 3</h1> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn" class="n controller">
+      <i class="fas fa-arrow-circle-right"></i>
+    </button>
+
+    <!-- Popup 1 -->
+    <div class="P1" id="P1">
+      <div class="p1-first">
+        <img src="p1.JPEG" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "I built a dream with sleepless nights, A Photo booth of joy, of
+            smiles and lights. Poured all I had into each line of code, Not
+            knowing fate had drawn a sign. For when you stepped into its frame,
+            My world, once still, was not the same. That single photo, pure and
+            true, Became my chance to meet with you."
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 3, 2025</h1>
+      <div class="message-box">
+        <p>
+          Ito yung first picture natin, nung time na to pinipilit ka nina jimlex
+          magpapicture tapos ako syempre kunwari kunwarian, pakunwaring
+          hahanapin ko yung papapicturan mo, pero that time gusto ko talaga
+          magpapicture sayo kaya naglakas loob na ako kahit na may naririnig ako
+          kina kelvs e hindi ko kasi magawa magassume non baka kasi eme lang
+          pala yon bigla tapos diba gumagana sakin yung pa manhid effect mo kaya
+          hindi ko makita na tunay yung sinasabi nina kelvs HAHAHA. pero ayon
+          super saya ko nitong araw na to, parang ito narin ata yung araw na
+          nagsimulang magkakulay ang buhay ko (pasabog si bakla HAHAHA). Tapos
+          diba naikwento ko sayo na nag story ako nung sa booth para makita mo
+          kaso naka deact ka non, kaya pinilit talaga kita na pumunta booth
+          kahit na alam ko na nasabihan ka na nina allyssa chinat parin kita
+          HAHAHA para makapag papansin at masure na pupunta ka. Tapos ayon super
+          saya at sulit na sulit talaga ang puyat ko sa pag program sa
+          photobooth nayun at dun nagsimula ang ating kwento.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p1').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 2 -->
+    <div class="P2" id="P2">
+      <div class="p1-first">
+        <img src="p2.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "You walked in, and I forgot to breathe, Heart pounding loud beneath
+            my sleeve. My mind went blank, I tried to speak, But all I felt were
+            blushing cheeks. So I tossed a smile, a playful line, Hoping you'd
+            laugh and meet my eyes. Just one light tease, a gentle try, To catch
+            your gaze as you walked by."
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 4, 2025</h1>
+      <div class="message-box">
+        <p>
+          Nagpresenta talaga ako dito na tumao sa registration e HAHAHA, tapos
+          nung nakita ko kayo na papasok na bigla ako kinabahan, hindi ko alam
+          kung ano gagawin ko kung magpapansin ba ako o pano irereact ko kasi
+          diba nag pic tayo kinahapunan nito HAHAHAHA, tapos si bakla pasabog
+          talaga parang dedma lang ikaw sakin neto HAHAHAHA tapos gusto ko
+          magpapansin sayo ng oras na to kaya niloloko kita habang nag susulat
+          ka dun sa attendace, sabi ko e rica late ka na HAHAHAHA, tapos ngumiti
+          ka lang siguro ang corny ko non HAHAHAHA. Pero pasabog ka sa outfit mo
+          kinabog mo nanaman ako at gusto ko rin ng red/black dress HAHAHAHA
+          dapat pala nakapag red din na toxido HAHAHAHA. tapos nung pagkatapos
+          mo mag register maya maya inutusan naman ako na kuhanin yung naiwan ni
+          harvey na crown para sa king and queen, namroblema ako nun e at kainit
+          sa labas tapos diga may balak ako na isayaw ka e kakahiya at ako'y
+          nalagkitan na ng init sa labas HAHAHAHA
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p2').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 3 -->
+    <div class="P3" id="P3">
+      <div class="p1-first">
+        <img src="p3.JPG" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "In this night, you were the star in my eye, Nothing outshone your
+            smile, not even the sky. With flowers in bloom filling up the place,
+            None could match your beauty and grace. The world grew quiet, time
+            slipped slow, All I saw was your gentle glow. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 4, 2025</h1>
+      <div class="message-box">
+        <p>
+          Nagsasayawan at nagtatalunan lang kami sa stage tapos bigla ako
+          tinawag ni jimlex at magpapapicture daw, sobrang tuwa ko naman nare
+          kaso'y ako'y naunahan mo, dapat ako ang unang gagalaw kaso mahina
+          sadya si gov pasensya na pahuli pa kasi yung sa sayaw HAHAHAHA, super
+          pawis ako nito at galing sa pagtatalon pero parang biglang nanlamig
+          ang aking pawis at ikaw ba ga namang makakapag pa picture kay kathryn
+          ay talaga namang HAHHAHA, yung mga oras neto super saya ko kasi naulit
+          yung ating picture kala ko after nung una nating picture dun sa booth
+          ay wala ng kasunod, si bakla hilig pa naman mag overthink kala ko na
+          off ka sakin nung unang pic natin, kaya super tuwa ko rin talaga at
+          naulit pa sya HAHAHAHAHA
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p3').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 4 -->
+    <div class="P4" id="P4">
+      <div class="p1-first">
+        <img src="p4.JPEG" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "My body moved before thought could catch it, as if something
+            electric had stirred me awake. I reached for your hand without
+            hesitation, and asked you to dance, under the golden lights above.
+            There was no room for shyness, only the quiet certainty that this
+            moment mattered. We stepped into the center, not as two people
+            watched by a crowd, but as two hearts meeting in the calm of the
+            music."
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 4, 2025</h1>
+      <div class="message-box">
+        <p>
+          This was the first time in my life I asked someone to dance at a ball.
+          I’m glad it was you. And even more glad that I was the first to hold
+          your hand in a moment like this. Thankyou at hindi mo rineject yung
+          pag aya ko sayo nun. Buti nalang talaga naisayaw kita at isa yon sa
+          mga core memory ko ngayong college at dala dala ko yan pagtanda,
+          tandang tanda ko pa nung una kabang kaba pa ako hindi ko alam kung
+          pano kita aayain, tapos si kelvin pinapalas ang loob ko at pinupush
+          nya ako napuntahan na kita at gustong gusto ko na talaga non nahanap
+          lang ako ng timing,mahiyain kasi akong tao hindi ko kayang tumayo or
+          sumayaw sa harap ng maraming tao pero parang bakit nung hinawakan ko
+          ang iyong kamay at dahan dahan tayong papunta sa gitna parang nawala
+          yung kaba at hiya ko, I felt like na natural lang lahat ng nangyayari
+          na isinasayaw kita at hawak ko ang iyong mga kamay
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p4').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 5 -->
+    <div class="P5" id="P5">
+      <div class="p1-first">
+        <img src="p5.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "Being with you for the first time made me want you even more. The
+            joy, the laughter you brought, it gave life to me, like a broken
+            speaker suddenly singing again. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 13, 2025</h1>
+      <div class="message-box">
+        <p>
+          Ito talaga yung pinaka first date natin. Hindi sya yung una nating
+          pinaplano kasi epal yung bosh HAHAHAHA, ito rin bebii ang pinaka una
+          mong tampo sakin. super kabado ako non at hindi ko alam ang gagawin,
+          nakonsensya po ako kasi nakapagsabi ka na po nun tapos gumawa ka ng
+          paraan tapos hindi po pala tayo matutuloy pasensya na po, pero
+          Thankfully ay nakapag kita parin tayo, diba totoo ang kasabihang
+          walang makakapigil sa taong nag mamahalan HAHAHA, super nag enjoy ako
+          nito, medyo kabado pa ako nito kasi baka hindi ko mailabas yung same
+          energy ko katulad nung sa chat. sa unang kita palang natin nahulog na
+          kagad ako nang sobra sobra kasi bukod sa iyong face card ay nagustuhan
+          ko rin talaga yung buong pagkatao mo, Alam mo ba hindi ko namalayan
+          ang oras nito parang ang bilis nya, super nag eenjoy ako, parang ang
+          fullfilling kapag naririnig ko ang tawa mo nun, tapos kapag nag jojoke
+          ka ay talaga namang tagos sa buto HAHAHA. hindi ko sya maexplain pero
+          ang sarap mo talaga kasama, kaya humirit pa akong mag ice cream non
+          dahil gusto ko pa kita makasama nang matagal, dito nagsimula yung
+          nararamdaman ko na kahit ginabi na tayo pero bakit parang bitin parin
+          parang kapag pagkauwi na kagad ay namimiss na kagad kita na para bang
+          saglit lang tayo nagkita kinahapunan.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p5').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 6 -->
+    <div class="P6" id="P6">
+      <div class="p1-first">
+        <img src="p6.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "My heart dances like leaves in the spring wind— light, alive, and
+            carried by something I cannot see, but deeply feel. Each glance you
+            give is a breeze, each smile, a gust that lifts me higher. I flutter
+            not from fear, but from the thrill of being near you as if I’ve
+            waited through a long, silent winter just to feel this warmth again.
+            "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 16, 2025</h1>
+      <div class="message-box">
+        <p>
+          2nd Date na natin to pero ito yung first planned date natin, sa wakas
+          natuloy rin yung ating pinlano HAHAHA tanda ko pa kapag sinasabi ko
+          lagi na matutuloy tayo lagi akong sinesendan nung unggoy na nakatakip
+          sa tenga kasi ayaw mo na maniwala HAHAHAHA, pero Thankfully natuloy
+          tayoo tapos pasabog parehas tayo naka black tapos medyo matchy matchy
+          tayo kahit hindi natin pinagusapan, ganon siguro kapag tinadhana
+          HAHAHA. super saya ko nung araw na to eto rin yung first time natin
+          mag tiktok together, ansarap pala magtiktok HAHAHAHA or siguo gawa mo
+          kaya pala masarap magtiktok. Isa rin talaga to sa mga memorable na
+          date natin, lalo na nung nag punta tayo sa baywalk, ang deep ng mga
+          pinaguusapan natin and I really love listening to your stories, your
+          views in life tapos ang galing dito ko nakilala ang pagiging
+          adventurous ni rica mae. Listening to your stories, I find myself
+          falling deeper not just for your words, but for the soul behind them.
+          dito ko rin paunti unti nalalaman kung ano yung mga gusto mo sa buhay
+          at preference mo sa guy at pati narin yung past relationship mo. Super
+          ginabi na tayo nito tapos tumatawag na sina kelvin at si precious
+          tapos dito rin sumama ang loob ni inay kay precious(sorry precious).
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p6').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 7 -->
+    <div class="P7" id="P7">
+      <div class="p1-first">
+        <img src="p7.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "Today is your birthday, yet I feel Like I’m the one who received a
+            gift, For in this life, your presence Is the greatest blessing I
+            could ever lift. You brighten my days with just your light, Like
+            morning sun chasing off the night. A soul like yours is rare to
+            find, A treasure that forever lives in my mind. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 30, 2025</h1>
+      <div class="message-box">
+        <p>
+          Birthday mo nung araw na to, hindi ako yung may birthday pero super
+          excited ako nito HAHAHA tapos binigyan mo pa ako ng regalo na
+          bracelet. Hindi ko alam kung paano ako mag rereact non kasi first time
+          ko lang talaga makatanggap ng regalo from someone(except yung regalo
+          sakin nina mama dati nung bata) pero iba yung pakiramdam nung
+          nakatanggap ako ng regalo sa taong hindi ko pa kapamilya. super
+          naapreciate ko sya and I will treasure that bracelet forever. nagulat
+          ako kasi ikaw yung may birthday pero may pa regalo ka sakin HAHAHAA
+          thankyou bebi, super tuwang tuwa ang puso ko non kasi ganun pala ang
+          pakiramdam na maregaluhan. super saya at nag enjoy ako sa pagkain
+          natin dun sa samgyup, naglutulutuan pa sina bakla tapos andami natin
+          kinuhang side dish HAHAHA, super busog naman ako e, tapos dito ako
+          nagstart na mapansin na natutuwa ako kapag nakikita ko na naeenjoy mo
+          yung pagkain parang ang sarap sa puso na makita na masayang kang
+          kumakain, ito rin ang isa sa mga dahilan kaya ako si yaya na kumain
+          HAHAHA, binabalik balikan ko yung inedit mo na video natin habang
+          kumakain at nagagalak ako at naenjoy mo yung pagkain natin, tapos dito
+          may tinuro ka sakin na pagkain yung pinindot ba yon HAHAHAHA hindi ko
+          sya makalimutan HAHAHA, Super nag enjoy ako nito at nakita ko na
+          masaya ang aking baby sa kanyang birthday
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p7').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 8 -->
+    <div class="P8" id="P8">
+      <div class="p1-first">
+        <img src="p8.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "As I listened to your story, My heart reached out to you, Wishing I
+            could hold you close, And wrap you in all the love and care you
+            deserve. Every word you spoke, Felt like a thread woven into my
+            soul, And I wanted nothing more Than to be your calm after the
+            storm. To be the warmth in your coldest days, The steady hand when
+            the world shakes. You are not alone in what you bear, I’m here, and
+            I’ll always care. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">April 30, 2025</h1>
+      <div class="message-box">
+        <p>
+          after natin kumain dumiretso tayo dito sa outlets, andami ko nalaman
+          sa life mo nung mga oras na to, pati ako nagshare rin. ang gaan pala
+          rin sa pakiramdam meron kang napag kwekwentuhan ng mga about sa
+          family, kasi parang pakiramdam ko naishashare ko yung burdens at
+          problems ko and It's nice to have someone that actually listen to my
+          story. kasi more like a listener po talaga ako, hindi ako sanay na ako
+          yung nag oopen, nagkwekwento pero for the first time naranasan ko rin
+          mag open to someone kaya I'm glad talaga na ipinagkaloob ka sakin ng
+          panginoon. After I heard your story, parang mas lalo rin ako
+          namotivate na magsumikap pa ng todo sa aking career at buhay so i can
+          support you more tsaka I want to be ready financially kasi ayaw ko po
+          na maging burden ako sayo at I know that you have something to prove
+          first in your family, tsaka gusto ko po na makapag focusan mo muna na
+          masupport ang iyong family kaya I want to be ready para pagdating ng
+          panahon na nasusupport mo na ang pamilya mo ay financially stable
+          narin ako to support you and your family and also my parents.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p8').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 9 -->
+    <div class="P9" id="P9">
+      <div class="p1-first">
+        <img src="p9.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "Was it the beauty of the view that stole my breath? Or was it just
+            being beside you that made it all feel like magic? The sky was soft,
+            a gentle shade of cloudy blue, But your smile was the only thing I
+            truly saw. Each second with you felt like a secret I never wanted to
+            end. Maybe it wasn't the view at all, maybe it was you all along. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 1, 2025</h1>
+      <div class="message-box">
+        <p>
+          super saya ko at may part 2 tayo ng iyong birthday celebration. super
+          duper saya ko at nasosolo kita sa birthday mo, Thank you, bebii, for
+          choosing to spend your special day with me. Of all the places and
+          people you could be with, you chose us and that means the world to me.
+          nagtagaytay tayo nito tapos nag skyranch tayo, yung ferris wheel kagad
+          ang pinuntahan natin para makita natin yung magandang view. antuwa
+          natin kasi may aircon sya kaso ambilis nya lang natapos at isang ikot
+          lang sya, pero ang saya lalo na nung nasa kalagitnaan tayo at malapit
+          na sa pinakatuktok, kitang kita natin yung view sa taas tapos
+          natatanaw natin ang taal ang ganda nyaa. habang pinagmamasdan mo ang
+          mga tanawin pasimple kitang pinicturan kasi ansaya mo talaga tingnan
+          habang naamaze ka view na nakikita natin. If I was given a chance to
+          stop the time, siguro nung sa mga moment nito ko sya gagamitin. I will
+          use that chance para mapagmasdan ko ng mas matagal ang magagandang
+          view na kasama ka. Nalilito nga ako kung saan ba ako dapat tumingin
+          kung dun ba sa magandang tanawin or sayo kasi parehas ang ganda
+          pagmasdan HAHAHA
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p9').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 10 -->
+    <div class="P10" id="P10">
+      <div class="p1-first">
+        <img src="p10.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "I’ve never been certain about much in life. Every choice comes with
+            hesitation, Even the simplest ones leave me unsure, Like choosing
+            between chocolate or milk, Coffee or tea, butter or honey. But for
+            the first time, something feels undeniably right. My heart is sure
+            of one thing, And that one thing is you. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 1, 2025</h1>
+      <div class="message-box">
+        <p>
+          Mag vivikings dapat tayo nito kaso super init, tapos hindi tayo
+          makapag decide kung saan tayo pupunta kasi ang init tapos hindi natin
+          alam ang gagawin at kung saan maganda makapunta hangang sa nagutom
+          tayo tapos hindi rin natin alam kung ano masarap kainin HAHAHA,
+          pasensya ka na kung sa nung mga una una ay hindi rin ako marunong
+          magdesisyon, indicisive rin kasi ako hindi ako marunong mag desisyon
+          pero pakonti konti ko na sya nababago at natutuwa ako na nakakapag
+          decide na ako paminsan minsan, gusto ko rin na balang araw ay masanay
+          na ako na pumili ng mga magagandang desisyon tapos para ako na po ang
+          bahala sa lahat ng ating mga lakad at pagdedesisyonan at gusto ko po
+          na ma feel mo na hindi ka mahihirapan mag decide at ang need mo lang
+          po ay to be there for me, pero pagdating sayo parang ang bilis mag
+          decide ng puso ko, kahit nung mga una palang nating pagsasama na para
+          bang na walang pagalin langan ay nakapag decide na agad na siya na ito
+          na to, sure na sure na ako na dito ako mag sesetle at magcrecreate ng
+          future na ikaw ang kasama. sabi nga dun sa kanta na balisong ay "Never
+          in my life have I been more sure". Pero yun na nga nakapag decide rin
+          tayo na mag hotdog sandwitch tayo tapos pinakitaan kita kung gaano ako
+          kalakas sa hot sauce HAHAHA, nahuli mo pa ako na hindi inubos yung hot
+          sauce na hindi maanghang HAHAHAHA.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p10').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 11 -->
+    <div class="P11" id="P11">
+      <div class="p1-first">
+        <img src="p11.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "I never feel like I'm wasting time with you. We could sit in
+            silence for hours and it would still feel so full and good and
+            necessary,Like the quiet wraps around us gently, Not as emptiness,
+            but as presence.There’s a warmth in your presence that words can’t
+            touch,A calm that settles in my chest like everything is finally
+            right. No need to fill the space with sound, Because being with you
+            is more than enough. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 1, 2025</h1>
+      <div class="message-box">
+        <p>
+          pandahanap po tayo dito ng mapipicturan HAHAHAHA super init kasi nito
+          kaya hindi tayo nakakapag picture ng ayos HAHAHA, tapos sa hangang
+          nakakita tayo ng mascot nag papicture tayo tapos bigla syang sumama
+          HAHAHA, tapos nakapag papicture din tayo dun sa kina kuya yung
+          napadaan lang. after non nagtiktok na tayo tapos nagpahinga na tayo
+          dun sa malapit sa entrance, inaantok ka na po nun kasi super napagod
+          kasi maghapon rin po tayo nung kinahapunan po nun. habang nag
+          papahinga tayo ay naki charge tayo dun kay ate na nasa may stall,
+          tapos habang nakatambay tayo niloloko tayo nung isa pang mascot
+          sinesenyasan tayo ng heart HAHAHA ang nasa isip ko nun ay sige lang
+          kuya ipagpatuloy mo lang at kinikilig ako HAHAHAHA, nag aalala ako
+          nito kasi super napagod ka tapos nagwoworry rin ako baka hindi ka
+          masyado nag enjoy gawa po ng super init tapos wala pa po tayo
+          mapuntahan, pero that time masaya parin ako nakatambay lang tayo sa
+          may malapit sa entrace tapos nagpapahinga, I always have this feeling
+          na nag eenjoy parin ako kahit wala tayo ginagawa basta alam ko na nasa
+          tabi ka ay may saya at kilig parin akong nadarama.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p11').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 12 -->
+    <div class="P12" id="P12">
+      <div class="p1-first">
+        <img src="p12.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "Your laugh is the melody I never tire of hearing, a sound that
+            turns ordinary days into something beautiful. It dances through the
+            air like sunlight on water, brightening even the dullest corners of
+            my world. And your smile, it's not just a curve of your lips, it's a
+            sunrise after a long night, a warmth that sinks gently into my
+            chest. I could spend forever just watching you smile.In a world full
+            of noise and fleeting moments, your laugh and your smile are the
+            constants I want to keep, the music and the view I never want to
+            lose. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 1, 2025</h1>
+      <div class="message-box">
+        <p>
+          napasubok ako dito HAHAHA, nailabas ko ang aking hidden talent na
+          sinasabi ng karamihan na dapat naging hidden nalang forever HAHAHA.
+          super saya ko nito at para tayong nag coconcert, hinding hindi ako
+          mahihiyang iparinig ang pangit kung boses kung kapalit naman nito ay
+          ang halakhak mo na parang musikang bumabalot sa aking pandinig na para
+          bang ansarp paulit ulit pakinngan, isa pa ang ngiti mong nakakahawa ay
+          kaysarp pagmasdan. isa talaga sa pinaka mahirap na part kapag tayo ay
+          magkasama ay ang paguwi, pinaka nakakalungkot itong parte ng araw
+          natin at sa tuwing tayo ay magkakahiway ng landas ay ang nasa isip ko
+          kagad ay kelan kaya ulit tayo magkikita, namimiss ko kagad ang mga
+          tawa at mga ngitian mo kapag tayo ay magkasama na kaya kapag
+          pagkahatid ko sayo at pauwi na ako ay parang naririnig ko parin sya at
+          kapag pinagmamasdan ang katabing upuan ko sa sasakyan ay ngiti mo ang
+          aking nakikita
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p12').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 13 -->
+    <div class="P13" id="P13">
+      <div class="p1-first">
+        <img src="p13.PNG" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "When I’m with you, I cannot see my flaws. It’s as if your eyes
+            rewrite the way I see myself not broken, not lacking, but whole. You
+            make me feel like I’m enough, just by the way you hold me in your
+            gaze. The insecurities that once echoed loudly fall silent in the
+            softness of your presence. Around you, I don’t feel the need to
+            hide. You don’t just accept my imperfections— you make them feel
+            like they belong. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 16, 2025</h1>
+      <div class="message-box">
+        <p>
+          First time ko neto mag KTV, super saya talaga at andami kong
+          nagagawang first time ko kasama ka HAHAHAHA, sana hindi ka na off sa
+          aking mala daniel padillia na may sipon na boses HAHAHA, akala ko
+          super tagal na nung 1hr pero parang bitin pala, ambilis nya matapos
+          kung kelang na ginaganahan si kathryn kumanta sayang naubos yung time
+          HAHAHAHA, eto rin yung time na nag ikot tayo sa supermarket, ansaya
+          rin non at dito nag start yung paghawak mo sa balikat ko habang
+          nagagagala tayo HAHAHAHA hindi ko pinapahalatang kinikilig ako non
+          syempre dapat kunwaring pabato muna HAHAHAHA, pero masaya syaa andami
+          natin nakitang pedeng bilhin katulad ng bigas para praktical na kagad
+          HAHAHAHA, eto rin yung time na si precious ay ginabi na kina ate
+          margs. tapos eto rin ata yung first time mo na umangkas sakin sa motor
+          kung hindi ako nagkakamali tapos wala pa ako dala extrang helmet non
+          HAHAHAHA
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p13').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 14 -->
+    <div class="P14" id="P14">
+      <div class="p1-first">
+        <img src="p14.png" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "My tears fall on their own whenever the thought creeps in— that
+            maybe, I no longer matter to you. The ache of that fear is
+            unbearable. I can’t stand the weight of imagining a world where you
+            walk away, leaving me behind as if I was never something worth
+            holding onto. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 18, 2025</h1>
+      <div class="message-box">
+        <p>
+          Ito yung time na nag comshop tayo at nag aral tayo sa programming,
+          super saya ko rin nito at maghapon tayo magkasama tapos na eenjoy ko
+          yung pagtuturo ng programming even though hindi ako masyado magaling
+          magturo at minsan ay hindi clear ang explanation ko ay natutuwa ako
+          kasi nakikinig ka parin. hindi ko alam bat nag eenjoy ako kapag
+          binubugbog mo ako HAHAHAHA siguro dati talaga ako punching bug. this
+          time I like how we started to be comfortable with each other na, it
+          really matters to me kapag nagiging clingy ka sakin and I realized
+          that I also crave for physical touch rin pala, Its just hindi ko pa
+          sya nararanasan and you made me realized that the importance and joy
+          in it, thats why yung rankings ko ng love language ay nag iba. Thank
+          you for being clingy with me, I really appreciate it at randam ko
+          talaga ang warmth of having someone by your side and also yung
+          presence mo na hinahanap hanap ko. tapos dito rin pala ako umiyak ay
+          este napuwing HAHAHA, inaway mo kasi ako chrz HAHAHA kasalanan ko sya
+          at ang pabebe ko hindi ko magawa yung kay alden na padila HAHAHA pero
+          super saya ko at nagbati tayo at pinansin mo ako tapos nag K-mart pa
+          tayo ansarap nung kinain natin tapos dito ko nadiscover yung fav mo na
+          sea weed
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p14').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 15 -->
+    <div class="P15" id="P15">
+      <div class="p1-first">
+        <img src="p15.jpg" class="picture1" />
+        <div class="taglineBox">
+          <p>
+            "Traveling with you gives me the greatest joy, Not just for the
+            places we see, but for the way your hand feels in mine as the world
+            rushes by around us. Every road becomes a memory, every stop a
+            moment I want to hold forever. Because no matter where we go, the
+            journey feels like home with you beside me. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 25, 2025</h1>
+      <div class="message-box">
+        <p>
+          anlayo ng naabot natin dito bigla tayo nag sm calamba pero kahit
+          malayo sya parang ambilis lang natin makarating at hindi ko ramdam ang
+          inip at pagod kapag kasama kita bumyahe, siguro tuwing byabyahe ako
+          magisa tapos papuntang malalayo lagi kitang maiisip, hahanaphanapin ko
+          yung taong katabi ko sa jeep at nakahawak saking mga balikat na para
+          bang kahit anong layo pa ng destination ay hindi ako maiinip at
+          mapapagod sa haba ng byahe. tapos nanonood tayo ng Final Destination,
+          maganda rin syaa namatay nga lang sila lahat HAHAHAHAHA, tapos nag
+          photo booth tayo, niyaya pa kita mag suot nuong parang mga kimono
+          kimono na pang japanese ata yon HAHAHAHA, pero ang napili natin ay
+          yung shades na pang gengsta HAHAHAHA, pero ang cute at ang bangis
+          natin don ha HAHAHAHA, ayaw pa gumana ng qr dun sa una nating pic kaya
+          bumalik tayo tapos nilibre tayo dun sa pag retake natin kaso hindi po
+          natin napili yung fav pose mo sorry. tapos po pala dito mo pinatikim
+          sakin yung kettle corn na blue ansarap nya pala kaso naiuwi ko sya
+          HAHAHAH sorry ulit bebii nawala sa aking isipan. ginabi na po tayo ng
+          uwi nito pero sulit sya at ang saya saya ng araw natin.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p15').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 16 -->
+    <div class="P16" id="P16">
+      <div class="p1-first">
+        <img src="p16.PNG" class="picture1 pc" />
+        <div class="taglineBox">
+          <p>
+            "They say when the storm comes, you should find shelter— wait it
+            out, let the thunder scream and the rain exhaust itself. But my
+            heart couldn’t bear the silence. Not knowing if your anger would
+            settle like dust or harden into distance. So I stepped out,
+            barefoot, shaking, into the middle of our storm. Not because I
+            wasn't afraid, but because I was more afraid of losing you than of
+            the lightning in your eyes. I didn’t wait for the clouds to clear. I
+            ran toward them toward you hoping my voice could be the first light
+            after the rain. Because sometimes, you don’t wait for the storm to
+            pass. You walk into it, if it means finding your way back to the one
+            you love. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 26, 2025</h1>
+      <div class="message-box">
+        <p>
+          nung time na to nagalit ka po sakin at antagal ko po matapos sa
+          school, ang aga mo pa naman po gumayak nun sorry po ulit bebii, hindi
+          kinakaya ng aking sarili na wala akong gawin nung mga oras na yon kaya
+          pinuntahan po kita at magbakasakaling makakapagusap tayo at makahingi
+          sayo ng kapatawaran, I'm glad na pinatawad mo ako nun bebii super saya
+          ko rin po at nagkausap po tayo ng masinsinan tapos sinamahan mo pa po
+          ako magpagupit Thankyou Thankyou poo. I want you to know, I’m not
+          replaying my past with you. You are not a replacement, a repeat, or a
+          shadow of anything before. You are completely different, you are the
+          only one I choose now and forever, fully and truly. What we have is
+          new, real, and only yours.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p16').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+    <!-- Popup 17 -->
+    <div class="P17" id="P17">
+      <div class="p1-first">
+        <img src="p17.png" class="picture1 pc" />
+        <div class="taglineBox">
+          <p>
+            "Be the constant in my chaos, the breath I can count on when the
+            world forgets how to be kind. When everything spins too fast and
+            nothing feels steady, let your presence be the stillness my heart
+            runs to. In the noise, be my quiet. In the storm, be the hand that
+            reaches through the rain. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 29, 2025</h1>
+      <div class="message-box">
+        <p>
+          Isa rin po ito sa mga super saya na date natin, world record po natin
+          to e mga mag 10 na po ata tayo nun nakauwi HAHAHAHA, nagpunta po tayo
+          sa may lodlod hinanap po natin yung kapehan na nakitan natin sa tiktok
+          and thankfully nakita namana natin syaa, maganda rin yung place bagay
+          na bagay ang aurahan natin HAHAHAHAHA, pasabog yung suot mo dito baks,
+          buti naabutan natin sya nung isang araw at ang galing mo talaga mag
+          tago HAHAHA, nag empanada or ensaymada tayo neto(nalilito parin ako
+          dun sa dalwa HAHAHAHA), anlaki nya pala hindi natin sya naubos pero
+          ang sarap nyaa. dito rin tayo nagshoot ng ating pangmalakasan na
+          tiktok na umabot sa aking buong pinsanin HAHAHAHA, bebii ansaya tapos
+          nakasama pa kita itry yung sinasabi mo sakin na kanin tapos may
+          century tuna at cheesewiz tapos ibabalot mo yung sea weed sa kanin,
+          ahhh sobrang sarap nya naalala ko ang lasa nya nakakagutom. nakapag
+          photoshoot rin tayo dito, andami ko naging pics iba talaga kapag may
+          photography skills ang baby mo, mapaparami ka talaga ng picss sakto at
+          naka batman fits ako HAHAHAHAHA. pagbubutihin ko pa ang aking skills
+          sa pagkuha ng pics at para makabawi ako kay kathryn.
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p17').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Popup 18 -->
+    <div class="P18" id="P18">
+      <div class="p1-first">
+        <img src="p18.png" class="picture1 pc" />
+        <div class="taglineBox">
+          <p>
+            "When I’m with you, something inside me softens a quiet ache I never
+            knew had a name begins to mend in the safety of your arms. Your hugs
+            are not just warmth, they are shelter. They feel like the whole
+            world finally paused just to hold me gently, like every echo of
+            loneliness I carried was heard—and hushed by your heartbeat. Beside
+            you, the child in me breathes easier. The one who longed to be seen,
+            to be held without fear, to be loved without condition is finally
+            home. You don’t just touch my skin; you touch the parts of me that
+            time forgot to heal. And now, because of you, they are blooming. "
+          </p>
+        </div>
+      </div>
+      <h1 class="date">May 29, 2025</h1>
+      <div class="message-box">
+        <p>
+          Isa pa ito bebii super saya na heal yung inner child ko dito HAHAHAHA,
+          ansarap maglaro na para bang walang problema at kasihan natin lang
+          dalwa ang mahalaga. sa mga bawat pag akyat natin ay punong puno ako ng
+          ligaya na para bang kahit gaano payan katarik basta ikaw ang kasama at
+          kawahak ang kamay ay kayang kaya natin yang akyatin. tapos nasakyan
+          natin lahat dito maliban lang dun sa nagalang train at nag cutoff sya.
+          pumila tayo dun sa slide na naka sakay tayo dun sa bilog ang saya nyaa
+          HAHAHAHA. nangako tayo sa isa't isa na sa susunod ay isasama natin si
+          nene ang sarap lang isipin na kapag dumating ang araw na yung ay 3 na
+          tayong magkasama at nag sasaya HAHAHAHA. may nakasayahan pa tayong
+          babae sina ate dun sa nagiikot tayo ng duyan HAHAHAHA, sa wakas
+          nagamit ko rin ang mahaba kong mga binti HAAHAHA, super gabi na tayo
+          nito umuwi pero ang totoo nyan ay nung mga oras na yon ay parang ayaw
+          ko na umuwi, nung gabi ring ito una kong naramdaman ang iyong yakap na
+          hangang ngayon ay hinahanap hanap ko dahil iba ang init na dulot nito
+          sa aking puso na para bang kahit anong pagod at paghihirap ang
+          nararamdaman ko ay mawawala sa isang yakap mo lang. I wish I could
+          feel those hugs when the world is heavy when the noise is too loud,
+          and the silence, even louder. When my shoulders forget how to rest,
+          and my chest forgets how to breathe. Just one embrace from you, and it
+          feels like everything will be alright
+        </p>
+      </div>
+      <button
+        class="GB popup-close"
+        onclick="document.getElementById('p18').classList.add('hidden')"
+      >
+        Go Back
+      </button>
+    </div>
+
+    <!-- Script -->
+    <script src="diary.js"></script>
+  </body>
+</html>

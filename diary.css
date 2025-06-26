@@ -1,0 +1,720 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@400..700&family=Exile&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&family=WDXL+Lubrifont+JP+N&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@400..700&family=Exile&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&family=WDXL+Lubrifont+JP+N&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@400..700&family=Exile&family=Gloria+Hallelujah&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&family=WDXL+Lubrifont+JP+N&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@400..700&family=Exile&family=Gloria+Hallelujah&family=Indie+Flower&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&family=WDXL+Lubrifont+JP+N&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+  background-color: powderblue;
+}
+
+/* Book */
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.front,
+.back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+}
+
+.back {
+  z-index: 0;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.frontPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(front-page.png);
+}
+.back-content {
+  transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+.flipped .back {
+  pointer-events: none !important;
+}
+.paper.flipped .front-content {
+  visibility: hidden;
+  pointer-events: none;
+}
+/* Controller Buttons */
+.controller {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.5s;
+  position: relative;
+  top: -280px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover i {
+  color: #636363;
+}
+
+i {
+  font-size: 30px;
+  color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+  z-index: 7;
+}
+
+#p2 {
+  z-index: 6;
+}
+
+#p3 {
+  z-index: 5;
+}
+#p4 {
+  z-index: 4;
+}
+
+#p5 {
+  z-index: 3;
+}
+#p6 {
+  z-index: 2;
+}
+#p7 {
+  z-index: 1;
+}
+
+.b {
+  left: 120px;
+}
+.n {
+  right: 120px;
+}
+
+.cover {
+  background-image: url(page-cover.png);
+}
+.cover-1 {
+  background-image: url(letter.png);
+}
+.cover-2 {
+  background-image: url(letter3.png);
+}
+
+.dear {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  top: 55px;
+  left: 30px;
+}
+.dear2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  top: 332px;
+  left: 183px;
+}
+
+.letter-content {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  width: 270px;
+  position: absolute;
+  top: 117px;
+  left: 40px;
+  height: 330px;
+  text-indent: 32px;
+  line-height: 18px;
+}
+.letter-content2 {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  width: 270px;
+  position: absolute;
+  top: 56px;
+  left: 40px;
+  height: 330px;
+  line-height: 18px;
+}
+
+.cover-3 {
+  background-image: url(page-cover2.png);
+}
+.cover-4 {
+  background-image: url(page-cover3.png);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cover-5 {
+  background: gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cover-6 {
+  background-image: url(page-cover3.png);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pictureBox {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin-top: 8px;
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+.P1 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P1.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P2.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P3 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P3.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.P4 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P4.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.P5 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P5.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P6 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P6.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P7 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P7.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P8 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P8.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P9 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P9.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P10 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P10.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P11 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P11.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P12 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P12.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P13 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P13.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P14 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P14.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P15 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P15.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P16 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P16.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P17 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P17.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.P18 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  align-items: center;
+  border: 2px solid;
+}
+.P18.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.picture1 {
+  width: 250px;
+  margin: 10px 10px 0 10px;
+  border-radius: 10px;
+}
+.taglineBox {
+  flex-grow: 1;
+  margin-top: 5px;
+  height: fit-content;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.p1-first {
+  display: flex;
+}
+
+.date {
+  border: 2px solid;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: rgb(235, 111, 111);
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+}
+.message-box {
+  width: 90%;
+  text-indent: 20px;
+  text-align: justify;
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  height: fit-content;
+}
+
+.GB {
+  position: relative;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: forestgreen;
+}
+
+.popup.show {
+  opacity: 1;
+}
+
+.popup.show .popup-content {
+  transform: scale(1);
+}
+@media (max-width: 470px) {
+  .taglineBox {
+    flex-grow: 1;
+    margin-top: 5px;
+    height: fit-content;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 13px;
+  }
+}
+@media (max-width: 430px) {
+  .taglineBox {
+    flex-grow: 1;
+    margin-top: 5px;
+    height: fit-content;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 10px;
+  }
+}
+.link1 {
+  position: absolute;
+  z-index: 99999999;
+  left: 16px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 10px;
+  opacity: 0;
+}
+.link2 {
+  position: absolute;
+  z-index: 99999999;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 10px;
+  opacity: 0;
+}
+.link3 {
+  position: absolute;
+  z-index: 99999999;
+  left: 16px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 171px;
+  opacity: 0;
+}
+.link4 {
+  position: absolute;
+  z-index: 99999999;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 171px;
+  opacity: 0;
+}
+.link5 {
+  position: absolute;
+  z-index: 99999999;
+  left: 16px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 340px;
+  opacity: 0;
+}
+.link6 {
+  position: absolute;
+  z-index: 99999999;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  top: 340px;
+  opacity: 0;
+}
+
+.links-1 {
+  display: none;
+}
+.links-2 {
+  display: none;
+}
+.links-3 {
+  display: none;
+}
+
+.pc {
+  height: 300px;
+}
